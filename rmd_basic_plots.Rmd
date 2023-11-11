@@ -4,32 +4,18 @@ author: "Jeff Goldsmith"
 date: 2019-09-10
 output: html_document
 ---
+We will try to figure out factors related to corruption index. 
+We will model the relationship between corruption index and some variables within countries year by year. These variables include government effectiveness, voice and accountability, economy stats such as GDP per capita, development indicators such as education, etc. Corruption index will also be analyzed by continents. We might also do a cluster analysis to classify countries. We will build models through linear regression, and use cross-validation to choose the best one.
+```{r}
 
-```{r setup, include = FALSE}
-library(tidyverse)
-```
 
-The purpose of this file is to present a couple of basic plots using `ggplot`.
 
-First we create a dataframe containing variables for our plots.
+library(DiagrammeR)
+mermaid("
+graph TD
+    
+    A-->B
+    B-->C
+")
 
-```{r df_create}
-set.seed(1234)
-
-plot_df = tibble(
-  x = rnorm(1000, sd = .5),
-  y = 1 + 2 * x + rnorm(1000)
-)
-```
-
-First we show a histogram of the `x` variable.
-
-```{r x_hist}
-ggplot(plot_df, aes(x = x)) + geom_histogram()
-```
-
-Next we show a scatterplot of `y` vs `x`. 
-
-```{r yx_scatter}
-ggplot(plot_df, aes(x = x, y = y)) + geom_point()
 ```
