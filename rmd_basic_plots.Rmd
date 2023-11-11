@@ -1,8 +1,10 @@
 ---
 title: "Basic Plots"
 author: "Jeff Goldsmith"
-date: 2019-09-10
-output: html_document
+date: "2019-09-10"
+output:
+  html_document: default
+  pdf_document: default
 ---
 Analyses：
 We will try to figure out factors related to corruption index. We will model the relationship between corruption index and some variables within countries year by year. 
@@ -15,12 +17,19 @@ There are some expected coding challenges. In the regression section, there migh
 
 
 
-library(DiagrammeR)
-mermaid("
-graph TD
-    
-    A-->B
-    B-->C
-")
+library(tidyverse)
+
 
 ```
+
+```mermaid
+
+graph TD
+A==>B
+
+
+```
+
+
+
+
